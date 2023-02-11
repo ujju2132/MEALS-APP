@@ -1,5 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:meals_app/screens/categories_screen.dart';
+import 'package:meals_app/screens/filters_screen.dart';
 import 'package:meals_app/screens/meal_detail_screen.dart';
 import 'package:meals_app/screens/tabs_screen.dart';
 import 'screens/category_meals_screen.dart';
@@ -15,6 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     ThemeData theme = ThemeData();
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'DeliMeals',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(
@@ -47,6 +50,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => TabsScreen(),
         CategoryMealsScreen.routeName: (Context) => CategoryMealsScreen(),
         MealDetailScreen.routeName:(context) => MealDetailScreen(),
+        FiltersScreen.routeName:(context) => FiltersScreen(),
       },
       // onGenerateRoute: (settings) {
       //   print(settings.arguments);
